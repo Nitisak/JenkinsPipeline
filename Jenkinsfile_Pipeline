@@ -8,7 +8,7 @@ pipeline {
                 echo "APK URL = ${params.APK_DEPLOY_PATH}   "
 
             
-                curl -O   "${apk_download_path}"
+                sh "curl -O   ${APK_DOWNLOAD_PATH}"
                 
             }
         }
