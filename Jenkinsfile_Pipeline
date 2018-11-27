@@ -1,11 +1,14 @@
 pipeline {
     agent any 
+    def apk_download_path     = params.APK_DOWNLOAD_PATH
     stages {
         stage('Stage 1') {
             steps {
                 echo "APK URL = ${params.APK_DOWNLOAD_PATH}"
                 echo "APK URL = ${params.APK_DEPLOY_PATH}   "
-                curl -O   $APK_DOWNLOAD_PATH 
+
+            
+                curl -O   $apk_download_path 
                 
             }
         }
