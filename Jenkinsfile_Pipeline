@@ -6,7 +6,8 @@ pipeline {
             steps {
                 echo "APK URL = ${params.APK_DOWNLOAD_PATH}"
                 echo "APK URL = ${params.APK_DEPLOY_PATH}   "
-
+                sh "rm -rf ${params.APK_DEPLOY_PATH}/*"
+                sh "cd ${params.APK_DEPLOY_PATH}"
             
                 sh "curl -O   ${params.APK_DOWNLOAD_PATH}"
                 
