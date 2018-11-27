@@ -9,9 +9,9 @@ pipeline {
                 sh "rm -rf ${params.APK_DEPLOY_PATH}/*"
                 
             
-                sh "curl -O  com.tuc.trueid.apk ${params.APK_DOWNLOAD_PATH}"
+                sh "curl -O  com.tuc.trueid-testfairy.apk ${params.APK_DOWNLOAD_PATH}"
 
-                sh "mv com.tuc.trueid.apk  ${params.APK_DEPLOY_PATH}/"
+                sh "mv com.tuc.trueid-testfairy.apk  ${params.APK_DEPLOY_PATH}/"
                 
             }
         }
